@@ -17,15 +17,17 @@ imgList.append(Image.open("7.png"))
 imgList.append(Image.open("8.png"))
 imgList.append(Image.open("9.png"))
 
+picW,picH = imgList[0].size
+
 #hold RGB values into the list
 redList =[]
 greenList = []
 blueList = []
 
-canvas = Image.new("RGB",(495,557), "white") #creates new image with the RGB colors the pixels and the white background color
+canvas = Image.new("RGB",(picW,picH), "white") #creates new image with the RGB colors the pixels and the white background color
 
-for x in range(0,495): #width
-    for y in range(0,557): #length
+for x in range(picW): #width
+    for y in range(picH): #length
         for myImage in imgList:
             myRed, myGreen, myBlue = myImage.getpixel((x,y)) #gets the current pixel value from position
                 
@@ -46,6 +48,6 @@ for x in range(0,495): #width
         greenList = []
         blueList = []
 
-canvas.save("newpic.png") #Saves the final product
+canvas.save("newpics.png") #Saves the final product
 
 
