@@ -44,7 +44,7 @@ for x in range(0,495): #width
         canvas.putpixel((x,y),(redHold,greenHold,blueHold)) #colors in the picture
         redList = []
         greenList = []
-    blueList = []
+        blueList = []
 
 canvas.save("newpic.png") #Saves the final product
 
